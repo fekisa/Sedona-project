@@ -1,0 +1,116 @@
+.field-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+
+.field-icon__title {
+  position: relative;
+
+  font-size: @main-font;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 58px;
+    height: 58px;
+    background: @bg-grey-icon url("../img/icon-phone.svg") no-repeat center;
+  }
+}
+
+.field-icon:last-child .field-icon__title::after {
+  background: @bg-grey-icon url("../img/icon-mail.svg") no-repeat center;
+}
+
+.field-icon__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  font-size: @main-font;
+}
+
+.field-icon__input {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 58px;
+  margin-top: 7px;
+  padding: 18px 20px;
+  padding-right: 60px;
+  padding-top: 17px;
+  color: @black;
+  font-size: @middle-font;
+  font-weight: 700;
+  text-transform: none;
+  background-color: @input-bg;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: @input-bg-hover;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: 4px solid @input-outline;
+    outline-offset: -4px;
+  }
+}
+
+@media @tablet-widths {
+  .field-icon {
+    position: relative;
+    margin-bottom: 23px;
+
+    &:last-child {
+      margin-bottom: 48px;
+    }
+  }
+
+  .field-icon__title {
+    width: 100%;
+  }
+
+  .field-icon__input {
+    margin-top: 7px;
+  }
+
+  .field-icon__text {
+    margin-left: 22px;
+  }
+}
+
+@media @desktop-widths {
+  .field-icon {
+    margin-bottom: 0;
+
+    &:first-child {
+      flex-grow: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .field-icon__title-disable {
+    display: none;
+  }
+
+  .field-icon__input {
+    width: 320px;
+    margin-top: 0;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  .field-icon__text {
+    margin-left: 0;
+    vertical-align: middle;
+  }
+}

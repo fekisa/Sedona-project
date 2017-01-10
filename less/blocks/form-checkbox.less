@@ -1,0 +1,137 @@
+.form-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 24px;
+  color: @black;
+  font-size: 0;
+  font-weight: 700;
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-checkbox__input {
+  display: none;
+}
+
+.form-checkbox__btn {
+  position: absolute;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 56px;
+  height: 56px;
+  background-color: @popup-wrap-color;
+}
+
+.form-checkbox__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 25px);
+  padding-left: 23px;
+  text-align: left;
+  font-size: @middle-font;
+}
+
+.form-checkbox__input:checked + .form-checkbox__btn::after {
+  position: absolute;
+  top: 30px;
+  left: 14px;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 4px;
+  background-color: @main-color;
+  transform: rotate(45deg);
+}
+
+.form-checkbox__input:checked + .form-checkbox__btn::before {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 4px;
+  background-color: @main-color;
+  transform: rotate(-45deg);
+}
+
+.form-checkbox:hover .form-checkbox__btn {
+  background-color: @input-bg-hover;
+}
+
+.form-checkbox:active .form-checkbox__btn {
+  background-color: @input-bg-down;
+}
+
+.form-checkbox__input:checked:active + .form-checkbox__btn:after,
+.form-checkbox__input:checked:active + .form-checkbox__btn:before {
+  background-color: #a5a5a5;
+}
+
+@media @tablet-widths {
+  .form-checkbox {
+    width: 50%;
+    margin-bottom: 33px;
+    text-align: right;
+
+    &:nth-child(2) {
+      order: -1;
+      padding-left: 90px;
+    }
+    &:nth-child(3) {
+      order: 1;
+      padding-left: 90px;
+    }
+    &:nth-child(4) {
+      order: 0;
+    }
+    &:nth-child(5) {
+      order: 2;
+      margin-bottom: 33px;
+    }
+  }
+
+  .form-checkbox__text {
+    padding-left: 26px;
+  }
+
+}
+
+@media @desktop-widths {
+  .form-checkbox {
+    width: auto;
+    padding-right: 0;
+
+    &:nth-child(2) {
+      order: -1;
+      padding-left: 0;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+      padding-left: 0;
+    }
+
+    &:nth-child(4) {
+      order: 0;
+      padding-left: 0;
+    }
+
+    &:nth-child(5) {
+      order: 2;
+      padding-left: 0px;
+    }
+  }
+
+  .form-checkbox__text {
+    width: auto;
+    padding-left: 25px;
+    text-align: left;
+  }
+}

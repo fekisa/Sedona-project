@@ -1,0 +1,29 @@
+.form-area {
+  width: 100%;
+  height: 160px;
+  padding: 16px 20px;
+  color: @black;
+  font-size: @middle-font;
+  font-weight: 700;
+  text-transform: none;
+  background-color: @input-bg;
+  resize: none;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: @input-bg-hover;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: 4px solid @input-outline;
+    outline-offset: -4px;
+  }
+}
+
+@media @tablet-widths {
+  .form-area {
+    padding: 16px 21px;
+  }
+}

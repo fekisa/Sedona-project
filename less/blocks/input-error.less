@@ -1,0 +1,32 @@
+.input-error {
+  display: none;
+  width: 100%;
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 11px;
+  color: @error;
+  font-size: @main-font;
+  font-weight: 700;
+  text-transform: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+@media @tablet-widths {
+  .input-error {
+    position: absolute;
+    width: auto;
+    top: -6px;
+    right: 0;
+  }
+}
+
+@media @desktop-widths {
+  .input-error {
+    top: -38px;
+    right: 108px;
+  }
+}

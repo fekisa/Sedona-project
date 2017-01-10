@@ -1,0 +1,224 @@
+.presentation {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.presentation__text-wrapper {
+  padding: 0 30px;
+}
+
+.presentation__title {
+  margin: 0;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.presentation__text {
+  margin: 0 auto;
+  margin-bottom: 35px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.presentation__image-wrapper {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.presentation__video {
+  display: block;
+}
+
+.presentation__wrapper {
+  position: relative;
+}
+
+.presentation__panel {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  margin: 0 auto;
+  padding: 24px 25px;
+  padding-bottom: 15px;
+  font-size: 0;
+  background-color: @popup-wrap-color;
+}
+
+.presentation__replay,
+.presentation__subtitles,
+.presentation__fullscreen {
+  border: none;
+  outline: none;
+}
+
+.presentation__progress {
+  position: absolute;
+  top: -47px;
+  left: 0;
+  width: 100%;
+  padding: 22px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.presentation__bar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: rgba(256, 256, 256, 0.3);
+}
+
+.presentation__toggle {
+  position: absolute;
+  top: -3px;
+  width: 9px;
+  height: 9px;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.presentation__toggle:hover {
+  background-color: @video-btn-hover;
+}
+
+.presentation__toggle:active {
+  background-color: @video-btn-down;
+}
+
+.presentation__btn-wrapper {
+  flex-grow: 1;
+}
+
+.presentation__replay {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+}
+
+.presentation__subtitles {
+  width: 50px;
+  height: 30px;
+  background-color: transparent;
+}
+
+.presentation__fullscreen {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+}
+
+.presentation__icon {
+  fill: @video-btn;
+}
+
+.presentation__replay:hover .presentation__icon,
+.presentation__fullscreen:hover .presentation__icon,
+.presentation__subtitles:hover .presentation__icon {
+  fill: @video-btn-hover;
+}
+
+.presentation__replay:active .presentation__icon,
+.presentation__fullscreen:active .presentation__icon,
+.presentation__subtitles:active .presentation__icon {
+  fill: @video-btn-down;
+}
+
+@media @tablet-widths {
+  .presentation {
+    padding: 67px 60px;
+    padding-bottom: 40px;
+  }
+
+  .presentation__image-wrapper {
+    width: 648px;
+    height: 500px;
+  }
+
+  .presentation__text-wrapper {
+    padding: 0 115px;
+  }
+
+  .presentation__title {
+    margin-bottom: 31px;
+    font-size: @large;
+  }
+
+  .presentation__text {
+    margin-bottom: 72px;
+  }
+
+  .presentation__panel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .presentation__progress {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    width: 389px;
+    margin-right: 42px;
+    padding: 0;
+    padding-top: 10px;
+    background-color: transparent;
+  }
+
+  .presentation__bar {
+    width: 100%;
+    height: 3px;
+  }
+
+  .presentation__toggle {
+    left: 189px;
+  }
+
+  .presentation__replay {
+    flex-grow: 0;
+    margin-right: 42px;
+  }
+
+  .presentation__subtitles {
+    margin-right: 42px;
+  }
+
+  .presentation__icon {
+    fill: @white;
+  }
+}
+
+@media @desktop-widths {
+  .presentation {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 75px;
+  }
+
+  .presentation__image-wrapper {
+    width: 800px;
+    height: 500px;
+  }
+
+  .presentation__text {
+    margin: 0 auto;
+    margin-bottom: 72px;
+    padding: 0;
+  }
+
+  .presentation__text-wrapper {
+    margin: 0 auto;
+    margin-bottom: 72px;
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+
+  .presentation__progress {
+    width: 540px;
+  }
+}

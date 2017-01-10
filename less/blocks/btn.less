@@ -1,0 +1,67 @@
+.btn {
+  display: block;
+  color: @white;
+  font-size: @big-font;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: @blue;
+  border: none;
+  outline: none;
+
+  &--small {
+    margin: 0 auto;
+    padding: 20px 75px;
+    font-size: @middle-font;
+  }
+
+  &--form {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 26px;
+    padding: 15px 20px;
+  }
+
+  &:hover {
+    background-color: @btn-hover;
+  }
+
+  &:active {
+    color: @btn-down-color;
+    background-color: @btn-down;
+  }
+
+  &:disabled {
+    background-color: @btn-disabled;
+  }
+
+  &--progress {
+    animation-name: progress;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes progress {
+    0% {
+      background-color: @btn-down-color;
+    }
+
+    100% {
+      background-color: #3e84ae;
+    }
+  }
+}
+
+@media @tablet-widths {
+  .btn--form {
+    width: 324px;
+    margin: 0;
+    padding: 15px 20px;
+  }
+}
+
+@media @desktop-widths {
+  .btn--form {
+    width: 480px;
+    padding: 16px 20px;
+  }
+}

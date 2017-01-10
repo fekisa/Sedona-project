@@ -1,0 +1,20 @@
+.gallery-page__image-block {
+  display: flex;
+  flex-direction: column;
+}
+
+@media @tablet-widths {
+  .gallery-page__image-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    padding-top: 55px;
+  }
+}
+
+@media @desktop-widths {
+  .gallery-page__image-block {
+    padding: 0;
+  }
+}

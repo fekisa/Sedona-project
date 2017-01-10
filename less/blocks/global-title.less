@@ -1,0 +1,190 @@
+.global-title {
+  color: @black;
+  font-size: @middle-font;
+  font-weight: 700;
+
+  &--name {
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
+
+  &--radio {
+    margin-bottom: 22px;
+  }
+
+  &--checkbox {
+    margin-bottom: 15px;
+  }
+
+  &--area {
+    margin-bottom: 16px;
+  }
+
+  &--color {
+    color: @white;
+  }
+}
+
+@media @tablet-widths {
+  .global-title {
+    font-size: @big-font;
+
+    &--color {
+      margin-bottom: 7px;
+    }
+
+    &--name {
+      margin-bottom: 58px;
+      text-align: left;
+    }
+
+    &--contacts {
+      position: relative;
+      margin-bottom: 24px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 50%;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    &--radio {
+      margin-bottom: 57px;
+    }
+
+    &--checkbox {
+      position: relative;
+      order: -2;
+      margin-bottom: 40px;
+      padding: 0 140px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 50%;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    &--area {
+      position: relative;
+      margin-bottom: 57px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 50%;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &::before {
+        left: 0;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .global-title {
+
+    &--color {
+      margin-bottom: 6px;
+      padding: 0 30px;
+    }
+
+    &--contacts {
+      position: relative;
+      width: 100%;
+      margin-bottom: 75px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 50%;
+        content: "";
+        display: block;
+        width: 280px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &--radio {
+      margin-bottom: 58px;
+    }
+
+    &--checkbox {
+      width: 100%;
+      margin-bottom: 40px;
+      padding: 0 280px;
+
+      &::after {
+        right: 0;
+        width: 280px;
+      }
+
+      &::before {
+        left: 0;
+        width: 280px;
+      }
+    }
+
+    &--area {
+      position: relative;
+      margin-bottom: 57px;
+
+      &::after {
+        top: 12px;
+        right: 0;
+        width: 280px;
+      }
+
+      &::before {
+        top: 12px;
+        left: 0;
+        width: 280px;
+      }
+    }
+  }
+}
